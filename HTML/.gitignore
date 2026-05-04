@@ -1,0 +1,13 @@
+```text
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+
+*.log
+npm-debug.log*
+
+node_modules/
+.env
