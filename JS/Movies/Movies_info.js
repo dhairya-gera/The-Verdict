@@ -7,10 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (existingPopup) existingPopup.remove();
 
         const popup = document.createElement('div');
-        popup.className = 'verdict-popup'; // Class CSS se uthayega
+        popup.className = 'verdict-popup'; 
         popup.innerHTML = `<i class="fa-solid fa-circle-check" style="color: var(--accent);"></i> ${message}`;
-        
-        // Initial state for animation
         popup.style.transform = 'translateY(80px)';
         popup.style.opacity = '0';
         

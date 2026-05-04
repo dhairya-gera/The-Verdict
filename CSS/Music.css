@@ -1,6 +1,3 @@
-/* =========================================
-   1. GLOBAL RESET & THEME VARIABLES
-   ========================================= */
 * { 
     margin: 0; 
     padding: 0; 
@@ -8,21 +5,19 @@
 }
 
 :root {
-    --primary: #8a2be2;
-    --primary-glow: rgba(138, 43, 226, 0.4);
-    --bg-dark: #0a0a0a;
-    --bg-glass: rgba(20, 20, 20, 0.6);
-    --text-main: #ffffff;
-    --text-muted: #9ca3af;
+    --primary-blue: #3AADFC;
+    --dark-bg: #060608;
+    --card-bg: #111116;
+    --text-white: #f0f0f5;
+    --text-gray: #8888a0;
+    --border: rgba(255, 255, 255, 0.08);
+    --blue-glow: rgba(58, 173, 252, 0.25);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* =========================================
-   2. BASE STYLES
-   ========================================= */
 body {
-    background: radial-gradient(circle at top left, #1a0b2e, #0a0a0a 70%);
-    color: var(--text-main);
+    background-color: var(--dark-bg);
+    color: var(--text-white);
     font-family: 'Roboto Condensed', sans-serif;
     overflow: hidden;
     height: 100vh;
@@ -42,9 +37,6 @@ a {
     transition: var(--transition); 
 }
 
-/* =========================================
-   3. APP LAYOUT & SIDEBAR
-   ========================================= */
 .app-container { 
     display: flex; 
     height: calc(100vh - 90px); 
@@ -52,9 +44,8 @@ a {
 
 .sidebar {
     width: 260px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(15px);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
+    border-right: 1px solid var(--border);
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -72,40 +63,37 @@ a {
     gap: 15px;
     padding: 12px; 
     border-radius: 8px; 
-    color: var(--text-muted);
+    color: var(--text-gray);
     font-weight: 600; 
     font-size: 15px;
 }
 
 .side-1 a:hover { 
-    color: var(--text-main); 
+    color: var(--text-white); 
     background: rgba(255, 255, 255, 0.05); 
     transform: translateX(5px); 
 }
 
 .side-1 a.active { 
-    color: #fff; 
-    background: linear-gradient(90deg, var(--primary-glow), transparent); 
-    border-left: 3px solid var(--primary); 
+    color: var(--primary-blue); 
+    background: rgba(58, 173, 252, 0.06); 
+    border-left: 3px solid var(--primary-blue); 
 }
 
 .sidebar-divider { 
     height: 1px; 
-    background: rgba(255, 255, 255, 0.1); 
+    background: var(--border); 
     margin: 20px 0; 
 }
 
 .playlist-header { 
     font-size: 12px; 
     letter-spacing: 2px; 
-    color: var(--text-muted); 
+    color: var(--text-gray); 
     text-transform: uppercase; 
     margin-bottom: 10px; 
 }
 
-/* =========================================
-   4. MAIN CONTENT & TOPBAR
-   ========================================= */
 .main-content { 
     flex: 1; 
     display: flex; 
@@ -131,19 +119,19 @@ a {
     justify-content: space-between; 
     align-items: center;
     padding: 15px 40px; 
-    background: rgba(10, 10, 10, 0.8); 
+    background: rgba(6, 6, 8, 0.9); 
     backdrop-filter: blur(20px);
     position: sticky; 
     top: 0; 
     z-index: 10; 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border);
 }
 
 .topbar-search {
     display: flex; 
     align-items: center; 
     gap: 10px;
-    background: rgba(255, 255, 255, 0.08); 
+    background: rgba(255, 255, 255, 0.05); 
     padding: 10px 20px; 
     border-radius: 30px;
     width: 400px; 
@@ -152,14 +140,14 @@ a {
 }
 
 .topbar-search:focus-within { 
-    border-color: var(--primary); 
-    box-shadow: 0 0 15px var(--primary-glow); 
+    border-color: var(--primary-blue); 
+    box-shadow: 0 0 15px var(--blue-glow); 
 }
 
 .topbar-search input { 
     background: none; 
     border: none; 
-    color: #fff; 
+    color: var(--text-white); 
     width: 100%; 
     outline: none; 
 }
@@ -168,12 +156,9 @@ a {
     width: 40px; 
     height: 40px; 
     border-radius: 50%; 
-    border: 2px solid var(--primary); 
+    border: 2px solid var(--primary-blue); 
 }
 
-/* =========================================
-   5. HERO SECTION
-   ========================================= */
 .featured-hero {
     position: relative; 
     height: 300px; 
@@ -187,7 +172,7 @@ a {
     position: absolute; 
     width: 100%; 
     height: 100%;
-    background: linear-gradient(45deg, #ff007f, #8a2be2, #4169e1);
+    background: linear-gradient(45deg, #0d3b66, #3AADFC, #060608);
     background-size: 300% 300%; 
     animation: gradientFlow 8s ease infinite;
 }
@@ -202,7 +187,7 @@ a {
     position: relative; 
     z-index: 2; 
     padding: 50px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent); 
+    background: linear-gradient(to right, var(--dark-bg), transparent); 
     height: 100%; 
     display: flex; 
     flex-direction: column; 
@@ -210,7 +195,7 @@ a {
 }
 
 .featured-tag { 
-    color: #fff; 
+    color: var(--text-white); 
     font-weight: bold; 
     margin-bottom: 10px; 
     letter-spacing: 2px; 
@@ -226,32 +211,29 @@ a {
 }
 
 .featured-desc { 
-    color: #ccc; 
+    color: var(--text-gray); 
     max-width: 500px; 
     margin-bottom: 20px; 
 }
 
 .btn-play-hero {
-    background: #fff; 
+    background: var(--text-white); 
     color: #000; 
     padding: 12px 30px; 
     border-radius: 30px;
     font-weight: bold; 
     font-size: 16px; 
     width: fit-content; 
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 .btn-play-hero:hover { 
     transform: scale(1.05); 
-    background: var(--primary); 
-    color: #fff; 
-    box-shadow: 0 10px 30px var(--primary-glow); 
+    background: var(--primary-blue); 
+    color: var(--text-white); 
+    box-shadow: 0 10px 30px var(--blue-glow); 
 }
 
-/* =========================================
-   6. TRACKLIST
-   ========================================= */
 .section-title { 
     font-family: 'Bebas Neue', sans-serif; 
     font-size: 2rem; 
@@ -259,7 +241,7 @@ a {
 }
 
 .accent-dash { 
-    color: var(--primary); 
+    color: var(--primary-blue); 
 }
 
 .track-row {
@@ -274,14 +256,13 @@ a {
 }
 
 .track-row:hover { 
-    background: rgba(255, 255, 255, 0.08); 
+    background: rgba(255, 255, 255, 0.05); 
     transform: translateY(-2px); 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .track-row.playing { 
-    background: var(--primary-glow); 
-    border-left: 4px solid var(--primary); 
+    background: rgba(58, 173, 252, 0.08); 
+    border-left: 4px solid var(--primary-blue); 
 }
 
 .title-wrapper { 
@@ -305,25 +286,21 @@ a {
 
 .track-artist { 
     font-size: 12px; 
-    color: var(--text-muted); 
+    color: var(--text-gray); 
 }
 
 .col-album { 
-    color: var(--text-muted); 
+    color: var(--text-gray); 
     font-size: 14px; 
 }
 
-/* =========================================
-   7. BOTTOM PLAYER (NOW PLAYING)
-   ========================================= */
 .now-playing-bar {
     position: fixed; 
     bottom: 0; 
     width: 100%; 
     height: 90px;
-    background: rgba(5, 5, 5, 0.9); 
-    backdrop-filter: blur(25px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--card-bg); 
+    border-top: 1px solid var(--border);
     display: grid; 
     grid-template-columns: 1fr 2fr 1fr; 
     align-items: center; 
@@ -341,7 +318,7 @@ a {
     width: 60px; 
     height: 60px; 
     border-radius: 50%; 
-    border: 2px solid var(--primary); 
+    border: 2px solid var(--primary-blue); 
     object-fit: cover; 
 }
 
@@ -361,7 +338,7 @@ a {
 
 .np-artist { 
     font-size: 12px; 
-    color: var(--text-muted); 
+    color: var(--text-gray); 
 }
 
 .np-controls { 
@@ -380,16 +357,16 @@ a {
 
 .ctrl-btn { 
     font-size: 18px; 
-    color: var(--text-muted); 
+    color: var(--text-gray); 
 }
 
 .ctrl-btn:hover { 
-    color: #fff; 
+    color: var(--primary-blue); 
 }
 
 .btn-play-main { 
-    background: #fff; 
-    color: #000; 
+    background: var(--text-white); 
+    color: var(--dark-bg); 
     width: 40px; 
     height: 40px; 
     border-radius: 50%; 
@@ -399,10 +376,10 @@ a {
 }
 
 .btn-play-main:hover { 
-    background: var(--primary); 
-    color: #fff; 
+    background: var(--primary-blue); 
+    color: var(--text-white); 
     transform: scale(1.1); 
-    box-shadow: 0 0 15px var(--primary-glow); 
+    box-shadow: 0 0 15px var(--blue-glow); 
 }
 
 .np-progress { 
@@ -415,7 +392,7 @@ a {
 
 .np-time { 
     font-size: 12px; 
-    color: var(--text-muted); 
+    color: var(--text-gray); 
 }
 
 input[type="range"] { 
@@ -432,8 +409,8 @@ input[type="range"]::-webkit-slider-thumb {
     width: 12px; 
     height: 12px; 
     border-radius: 50%; 
-    background: var(--primary); 
-    box-shadow: 0 0 10px var(--primary-glow); 
+    background: var(--primary-blue); 
+    box-shadow: 0 0 10px var(--blue-glow); 
 }
 
 .np-extras { 
@@ -448,202 +425,50 @@ input[type="range"]::-webkit-slider-thumb {
     width: 150px; 
 }
 
-/* =========================================
-   8. RESPONSIVE DESIGN (MEDIA QUERIES)
-   ========================================= */
-
-/* --- TABLET VIEW --- */
 @media (max-width: 992px) {
-    .sidebar { 
-        width: 200px; 
-        padding: 15px; 
-    }
-    .topbar-search { 
-        width: 280px; 
-    }
-    .featured-title { 
-        font-size: 3.5rem; 
-    }
-    .track-row { 
-        grid-template-columns: 40px 2fr 1fr 50px; 
-    }
+    .sidebar { width: 200px; padding: 15px; }
+    .topbar-search { width: 280px; }
+    .featured-title { font-size: 3.5rem; }
+    .track-row { grid-template-columns: 40px 2fr 1fr 50px; }
 }
 
-/* --- MOBILE VIEW --- */
 @media (max-width: 768px) {
-    .app-container { 
-        flex-direction: column; 
-        height: 100vh; 
-        padding-bottom: 130px; 
-    }
-    
-    .sidebar {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 20;
-    }
-    
-    .logo-link img { 
-        height: 30px; 
-        margin-bottom: 0; 
-    }
-    
-    .side-1 { 
-        display: flex; 
-        gap: 20px; 
-    }
-    
-    .side-1 a { 
-        font-size: 0; 
-        padding: 0; 
-    }
-    
-    .side-1 a i { 
-        font-size: 20px; 
-    }
-    
-    .playlists, 
-    .sidebar-divider { 
-        display: none; 
-    }
-
-    .main-content { 
-        overflow: hidden; 
-    }
-    
-    .topbar { 
-        padding: 15px 20px; 
-    }
-    
-    .topbar-search { 
-        width: 100%; 
-        margin-right: 15px; 
-    }
-    
-    .user-avatar img { 
-        width: 35px; 
-        height: 35px; 
-    }
-    
-    .content-scroll { 
-        padding: 10px 20px 40px; 
-    }
-
-    .featured-hero { 
-        height: auto; 
-        min-height: 220px; 
-        padding: 0; 
-        margin-bottom: 25px; 
-    }
-    
-    .featured-content { 
-        padding: 30px 20px; 
-    }
-    
-    .featured-title { 
-        font-size: 2.5rem; 
-        line-height: 1.1; 
-        margin-bottom: 15px; 
-    }
-    
-    .btn-play-hero { 
-        padding: 10px 25px; 
-        font-size: 14px; 
-    }
-
-    .section-title { 
-        font-size: 1.5rem; 
-    }
-    
-    .track-row { 
-        grid-template-columns: 25px 1fr 35px; 
-        gap: 10px; 
-        padding: 10px; 
-    }
-    
-    .col-album { 
-        display: none; 
-    }
-    
-    .track-thumb { 
-        width: 40px; 
-        height: 40px; 
-    }
-    
-    .track-title { 
-        font-size: 14px; 
-        white-space: nowrap; 
-        overflow: hidden; 
-        text-overflow: ellipsis; 
-        max-width: 180px; 
-    }
-    
-    .track-artist { 
-        font-size: 11px; 
-    }
-
-    .now-playing-bar {
-        height: auto;
-        padding: 15px;
-        grid-template-columns: 1fr; 
-        gap: 15px;
-        background: rgba(10, 10, 10, 0.95);
-        border-top: 2px solid var(--primary);
-    }
-    
-    .np-track-info { 
-        justify-content: flex-start; 
-    }
-    
-    .np-thumb img { 
-        width: 45px; 
-        height: 45px; 
-    }
-    
-    .np-controls { 
-        width: 100%; 
-    }
-    
-    .np-buttons { 
-        margin-bottom: 12px; 
-        gap: 30px; 
-    }
-    
-    .btn-play-main { 
-        width: 45px; 
-        height: 45px; 
-    }
-    
-    .ctrl-btn { 
-        font-size: 20px; 
-    }
-    
-    .np-extras { 
-        display: none; 
-    }
+    .app-container { flex-direction: column; height: 100vh; padding-bottom: 130px; }
+    .sidebar { width: 100%; height: auto; flex-direction: row; justify-content: space-between; align-items: center; padding: 15px 20px; border-right: none; border-bottom: 1px solid var(--border); z-index: 20; }
+    .logo-link img { height: 30px; margin-bottom: 0; }
+    .side-1 { display: flex; gap: 20px; }
+    .side-1 a { font-size: 0; padding: 0; border: none; }
+    .side-1 a.active { border: none; background: none; }
+    .side-1 a i { font-size: 20px; }
+    .playlists, .sidebar-divider { display: none; }
+    .main-content { overflow: hidden; }
+    .topbar { padding: 15px 20px; }
+    .topbar-search { width: 100%; margin-right: 15px; }
+    .user-avatar img { width: 35px; height: 35px; }
+    .content-scroll { padding: 10px 20px 40px; }
+    .featured-hero { height: auto; min-height: 220px; padding: 0; margin-bottom: 25px; }
+    .featured-content { padding: 30px 20px; }
+    .featured-title { font-size: 2.5rem; line-height: 1.1; margin-bottom: 15px; }
+    .btn-play-hero { padding: 10px 25px; font-size: 14px; }
+    .section-title { font-size: 1.5rem; }
+    .track-row { grid-template-columns: 25px 1fr 35px; gap: 10px; padding: 10px; }
+    .col-album { display: none; }
+    .track-thumb { width: 40px; height: 40px; }
+    .track-title { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
+    .track-artist { font-size: 11px; }
+    .now-playing-bar { height: auto; padding: 15px; grid-template-columns: 1fr; gap: 15px; background: var(--dark-bg); border-top: 2px solid var(--primary-blue); }
+    .np-track-info { justify-content: flex-start; }
+    .np-thumb img { width: 45px; height: 45px; }
+    .np-controls { width: 100%; }
+    .np-buttons { margin-bottom: 12px; gap: 30px; }
+    .btn-play-main { width: 45px; height: 45px; }
+    .ctrl-btn { font-size: 20px; }
+    .np-extras { display: none; }
 }
 
-/* --- SMALL MOBILE --- */
 @media (max-width: 480px) {
-    .featured-title { 
-        font-size: 2rem; 
-    }
-    
-    .track-title { 
-        max-width: 140px; 
-    }
-    
-    .topbar-search { 
-        padding: 8px 15px; 
-    }
-    
-    .topbar-search input { 
-        font-size: 14px; 
-    }
+    .featured-title { font-size: 2rem; }
+    .track-title { max-width: 140px; }
+    .topbar-search { padding: 8px 15px; }
+    .topbar-search input { font-size: 14px; }
 }

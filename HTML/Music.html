@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Music | The Verdict</title>
-
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/Music.css">
 </head>
 <body>
 
-    <!-- Main App Wrapper -->
     <div class="app-container">
         
-        <!-- ================= SIDEBAR ================= -->
         <aside class="sidebar">
             <div id="logo">
                 <a href="Home.html" class="logo-link">
-                    <img src="../Assets/images/logo.svg" alt="The Verdict Logo" class="nav-logo-img">
+                    <img src="../Assets/images/logo.svg" alt="The Verdict Logo">
                 </a>
             </div>
 
@@ -41,32 +35,28 @@
             </div>
         </aside>
 
-        <!-- ================= MAIN CONTENT ================= -->
         <main class="main-content">
             
-            <!-- Top Navigation Bar -->
             <header class="topbar">
                 <div class="topbar-search">
-                    <i class="fa-solid fa-search" style="color: #888;"></i>
-                    <input type="text" placeholder="Search for songs, artists, or albums..." id="searchInput">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search for songs or artists..." id="searchInput">
                 </div>
 
                 <div class="topbar-user">
                     <div class="user-avatar">
-                        <img src="../Assets/images/pfp.jpeg" alt="Profile Picture">
+                        <img src="../Assets/images/pfp.jpeg" alt="User">
                     </div>
                 </div>
             </header>
 
-            <!-- Scrollable Content Area -->
             <div class="content-scroll">
                 
-                <!-- Hero Section -->
                 <section class="featured-hero">
                     <div class="featured-bg-placeholder"></div>
                     <div class="featured-content">
                         <span class="featured-tag"><i class="fa-solid fa-bolt"></i> Global Top 50</span>
-                        <h1 class="featured-title" id="hero-title">Trending Hits 2026</h1>
+                        <h1 class="featured-title">Trending Hits 2026</h1>
                         <p class="featured-desc">Listen to the most played tracks right now. Updated daily with the freshest drops from around the world.</p>
                         <div class="featured-actions">
                             <button class="btn-play-hero" onclick="playFirstTrack()">
@@ -76,18 +66,13 @@
                     </div>
                 </section>
 
-                <!-- Dynamic Tracklist Section -->
                 <section class="tracklist-section">
-                    <div class="section-header">
-                        <h2 class="section-title">
-                            <span class="accent-dash">—</span> 
-                            <span id="list-heading">Recommended For You</span>
-                        </h2>
-                    </div>
+                    <h2 class="section-title">
+                        <span class="accent-dash">—</span> 
+                        <span id="list-heading">Recommended For You</span>
+                    </h2>
 
-                    <!-- JS injects tracks inside this container -->
                     <div class="tracklist-container" id="track-container">
-                        <p style="padding: 20px; color: #888;">Loading the best tracks...</p>
                     </div>
                 </section>
                 
@@ -95,21 +80,18 @@
         </main>
     </div>
 
-    <!-- ================= BOTTOM AUDIO PLAYER ================= -->
     <footer class="now-playing-bar">
         
-        <!-- Track Info (Left) -->
         <div class="np-track-info">
             <div class="np-thumb">
-                <img src="../Assets/images/logo.svg" alt="Cover Art" id="player-img">
+                <img src="../Assets/images/logo.svg" alt="Cover" id="player-img">
             </div>
             <div class="np-text">
-                <span class="np-title" id="player-title">Welcome to Verdict Music</span>
-                <span class="np-artist" id="player-artist">Search to start listening</span>
+                <span class="np-title" id="player-title">Verdict Music</span>
+                <span class="np-artist" id="player-artist">Select a song</span>
             </div>
         </div>
 
-        <!-- Player Controls (Center) -->
         <div class="np-controls">
             <div class="np-buttons">
                 <button class="ctrl-btn"><i class="fa-solid fa-backward-step"></i></button>
@@ -118,23 +100,20 @@
             </div>
             <div class="np-progress">
                 <span class="np-time" id="current-time">0:00</span>
-                <input type="range" class="np-seek" id="progress-bar" value="0" min="0" max="100">
-                <span class="np-time total" id="total-time">0:00</span>
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <span class="np-time" id="total-time">0:00</span>
             </div>
         </div>
 
-        <!-- Volume Controls (Right) -->
         <div class="np-extras">
             <div class="np-volume">
-                <i class="fa-solid fa-volume-high" style="color: #888;"></i>
-                <input type="range" class="np-vol-slider" id="volume-bar" value="100" min="0" max="100">
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" id="volume-bar" value="100" min="0" max="100">
             </div>
         </div>
         
     </footer>
 
-    <!-- Hidden Audio Element & Scripts -->
-    <audio id="main-audio"></audio>
     <script src="../JS/Music.js"></script>
 
 </body>
