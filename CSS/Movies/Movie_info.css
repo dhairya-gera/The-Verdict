@@ -517,82 +517,151 @@ footer {
 }
 
 
-/* --- 8. Responsive Design --- */
-@media (max-width: 768px) {
-    #navbar {
-        height: auto;
-        padding: 15px 20px;
-        flex-wrap: wrap; 
-        justify-content: center;
-    }
+/* --- 8. Responsive Design (Perfectly Fit for Mobile/Tablet) --- */
 
-    .logo-container { 
-        width: 100%; 
-        text-align: center; 
-        margin-bottom: 10px;
-    }
-
-    .search-container {
-        width: 100%;
-        order: 2;
-        margin-bottom: 15px;
-    }
-
-    .search-bar {
-        width: 100%;
-        background: #1a1a1a;
-        border: 1px solid #333;
-    }
-
-    #navlinks {
-        width: 100%;
-        order: 3;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 5px 0;
-        border-top: 1px solid #222; 
-    }
-
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
     #movie-hero {
-        margin-top: 140px; 
+        padding: 80px 50px 40px;
+        height: auto;
     }
-
     #movie-content {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        gap: 30px;
     }
-
-    #movie-poster img {
-        width: 200px;
-        box-shadow: 0 0 20px var(--primary-blue); 
-        margin-bottom: 20px;
-    }
-
     #movie-details h1 {
-        font-size: 2.2rem;
-        margin-top: 10px;
+        font-size: 3.5em;
     }
-
-    .movie-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 15px;
-        padding: 10px;
+    #actions {
+        margin-left: 0;
+        align-self: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #actions button, #actions a {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    #movie-description, .review-module {
+        padding: 60px 50px;
+    }
+    
+    .ratings-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Extra Small Screens (Phones) */
-@media (max-width: 480px) {
-    #movie-hero {
-        padding-top: 220px;
+/* Mobile Phones */
+@media (max-width: 768px) {
+    /* Navbar Adjustment */
+    #navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 15px;
+    }
+    .search-container { width: 90%; }
+    .search-container .search-bar { width: 100%; }
+    .search-bar input { width: 100%; }
+    #navlinks { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        width: 100%; 
+        gap: 1.5rem; 
+        padding-bottom: 5px;
     }
 
-    #actions {
-        flex-direction: column; 
+    /* Hero Section Fixes */
+    #movie-hero {
+        margin-top: 0; /* Removing negative margin due to taller mobile navbar */
+        padding: 160px 20px 40px; /* Top padding to clear navbar */
+        text-align: center;
+        background-position: top center !important; /* Keep focus on main image part */
+    }
+    
+    #movie-content {
+        align-items: center;
+    }
+
+    #movie-poster img {
+        width: 180px; /* Slightly smaller poster for mobile */
+    }
+
+    #movie-details h1 {
+        font-size: 2.8rem;
     }
 
     #info-grid {
-        grid-template-columns: 1fr; 
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Description & Reviews Padding */
+    #movie-description, .review-module {
+        padding: 40px 20px;
+    }
+
+    #movie-description h2 {
+        font-size: 1.6em;
+    }
+
+    #movie-description1 {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    /* Reviews Grid Stacking */
+    .ratings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-text-card {
+        padding: 20px;
+    }
+
+    /* Footer Alignment Match */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+    #movie-details h1 {
+        font-size: 2.2rem;
+    }
+    #movie-poster img {
+        width: 150px;
+    }
+    .verdict-popup {
+        bottom: 20px;
+        right: 20px;
+        left: 20px; /* Center popup on small screens */
+        justify-content: center;
     }
 }
 
