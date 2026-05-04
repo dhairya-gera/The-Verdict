@@ -1,6 +1,9 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/HTML/Home.html" }
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/HTML/Home.html",
+      "permanent": true
+    }
   ]
 }
