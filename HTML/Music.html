@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Verdict | Music & Reviews</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/Music.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div id="logo">
+                <a href="Home.html" class="logo-link">
+                    <img src="../../Assets/images/logo.svg" alt="The Verdict Logo" class="nav-logo-img">
+                </a>
+            </div>
+
+            <nav class="side-1">
+                <a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Explore</a>
+                <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> History</a>
+            </nav>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="playlists">
+                <p class="playlist-header">Library</p>
+                <a href="#"><i class="fa-solid fa-heart"></i> Liked Songs</a>
+                <a href="#"><i class="fa-solid fa-plus"></i> New Playlist</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-nav">
+                    <button class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+                <div class="topbar-search">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search soundtracks or movie reviews...">
+                </div>
+
+                <div class="topbar-user">
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
+                    <div class="user-avatar"><img src="/Assets/images/pfp.jpeg" alt="PFP"></div>
+                </div>
+            </header>
+
+            <div class="content-scroll">
+                <section class="featured-hero">
+                    <div class="featured-bg">
+                        <div class="featured-bg-placeholder"></div>
+                    </div>
+                    <div class="featured-content">
+                        <span class="featured-tag">Featured Release</span>
+                        <h1 class="featured-title">DHURANDHAR</h1>
+                        <p class="featured-artist">Official Soundtrack • 2026</p>
+                        <p class="featured-desc">Experience the adrenaline-pumping score from the year's most anticipated action thriller.</p>
+                        <div class="featured-actions">
+                            <button class="btn-play-hero"><i class="fa-solid fa-play"></i> Play Album</button>
+                            <button class="btn-save-hero"><i class="fa-regular fa-bookmark"></i> Save</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tracklist-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><span class="accent-dash">—</span>Popular Tracks</h2>
+                        <a href="#" class="see-all-link">See All</a>
+                    </div>
+
+                    <div class="tracklist-container">
+                        <div class="tracklist-header">
+                            <span>#</span>
+                            <span>Title</span>
+                            <span>Album</span>
+                            <span style="text-align:right">Time</span>
+                        </div>
+
+                        <div class="track-row playing">
+                            <div class="col-num">
+                                <span class="track-num">1</span>
+                                <i class="fa-solid fa-volume-high playing-icon"></i>
+                            </div>
+                            <div class="col-title">
+                                <span class="track-title">Dhurandhar - Title Track</span>
+                                <span class="track-artist">Shashwat Sachdev, Hanumankind...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like liked"><i class="fa-solid fa-heart"></i></button>
+                                <span class="track-duration">2:35</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">2</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Ishq Jalakar - Karvaan</span>
+                                <span class="track-artist">Shashwat Sachdev, Shahzad Ali...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">4:10</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">3</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Gehra Hua</span>
+                                <span class="track-artist">Shashwat Sachdev, Arijit Singh...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">6:02</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">4</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Teri Ni Kararan</span>
+                                <span class="track-artist">Shashwat Sachdev, Diljit Dosanjh...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">3:58</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">5</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Run Down The City - Monica</span>
+                                <span class="track-artist">Shashwat Sachdev, Reble...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">2:20</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">6</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Shararat</span>
+                                <span class="track-artist">Shashwat Sachdev, Madhubanti Bagchi...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">3:44</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">7</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Ez-Ez</span>
+                                <span class="track-artist">Shashwat Sachdev, Diljit Dosanjh...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">3:02</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">8</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Lutt Le Gaya</span>
+                                <span class="track-artist">Shashwat Sachdev, Simran Choudhary</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">4:13</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">9</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Move - Yeh Ishq Ishq</span>
+                                <span class="track-artist">Shashwat Sachdev, Reble, Sonu Nigam...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">3:24</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">10</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Naal Nachna</span>
+                                <span class="track-artist">Shashwat Sachdev, Afsana Khan...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">2:35</span>
+                            </div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="col-num"><span class="track-num">11</span></div>
+                            <div class="col-title">
+                                <span class="track-title">Ramba Ho</span>
+                                <span class="track-artist">Shashwat Sachdev, Madhubanti Bagchi...</span>
+                            </div>
+                            <div class="col-album">Dhurandhar</div>
+                            <div class="col-duration">
+                                <button class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <span class="track-duration">2:41</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="now-playing-bar">
+        <div class="np-track-info">
+            <div class="np-thumb"><div class="np-thumb-placeholder"></div></div>
+            <div class="np-text">
+                <span class="np-title">Dhurandhar - Title Track</span>
+                <span class="np-artist">Shashwat Sachdev</span>
+            </div>
+            <button class="np-like"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="np-controls">
+            <div class="np-buttons">
+                <button class="ctrl-btn"><i class="fa-solid fa-shuffle"></i></button>
+                <button class="ctrl-btn"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="ctrl-btn btn-play-main"><i class="fa-solid fa-play"></i></button>
+                <button class="ctrl-btn"><i class="fa-solid fa-forward-step"></i></button>
+                <button class="ctrl-btn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="np-progress">
+                <span class="np-time">0:00</span>
+                <div class="np-seek-wrap">
+                    <input type="range" class="np-seek" value="0" min="0" max="100">
+                </div>
+                <span class="np-time total">2:35</span>
+            </div>
+        </div>
+
+        <div class="np-extras">
+            <div class="np-volume">
+                <i class="fa-solid fa-volume-low"></i>
+                <input type="range" class="np-vol-slider" value="70">
+            </div>
+            <button class="icon-btn"><i class="fa-solid fa-list-check"></i></button>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies | The Verdict</title>
+    <link rel="stylesheet" href="../CSS/Explore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav id="navbar">
+        <div id="logo">
+            <a href="Home.html"><img src="/Assets/images/logo.svg" alt="The Verdict Logo"></a>
+        </div>
+
+        <div class="search-container">
+            <form class="search-bar" onsubmit="return false;">
+    <input type="search" placeholder="Search for movies, actors...">
+    <button type="button" class="search-btn" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+</form>
+        </div>
+
+        <ul id="navlinks">
+            <li><a href="Home.html" title="Home"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="Movies.html" title="Movies" class="active"><i class="fa-solid fa-clapperboard"></i></a></li>
+            <li><a href="TV-Shows.html" title="TV Shows"><i class="fa-solid fa-tv"></i></a></li>
+            <li><a href="Music.html" title="Music" target="_blank"><i class="fa-solid fa-music"></i></a></li>
+            <li><a href="Stats.html" title="Stats"><i class="fa-solid fa-chart-simple"></i></a></li>
+            <li><div class="user-avatar"><img src="/Assets/images/pfp.jpeg" alt="PFP"></div></li>
+
+        </ul>
+    </nav>
+</header>
+
+<main id="explore-container">
+
+    <h3 class="genre-name animate-slide" id="action-section">Action</h3>
+    <div class="movie-grid">
+        <a href="Movies/Dhurandhar.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Dhurandhar_V.jpg" alt="Dhurandhar"></div>
+            <div class="card-info"><h3>Dhurandhar</h3><p>Action • 2025</p></div>
+        </a>
+        <a href="Movies/Kill.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Kill_V.jpg" alt="Kill"></div>
+            <div class="card-info"><h3>Kill</h3><p>Action • 2023</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-Matrix_V.jpeg" alt="Matrix"></div>
+            <div class="card-info"><h3>The Matrix</h3><p>Action • 1999</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Inception_V.jpg" alt="Inception"></div>
+            <div class="card-info"><h3>Inception</h3><p>Action • 2010</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Sky-Force_V.jpg" alt="Skyforce"></div>
+            <div class="card-info"><h3>Sky Force</h3><p>Action • 2025</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Tenet_V.jpg" alt="Tenet"></div>
+            <div class="card-info"><h3>Tenet</h3><p>Action • 2020</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="thriller-section">Thriller</h3>
+    <div class="movie-grid">
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Badlapur_V.jpg" alt="Badlapur"></div>
+            <div class="card-info"><h3>Badlapur</h3><p>Thriller • 2015</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Gunday_V.jpg" alt="Gunday"></div>
+            <div class="card-info"><h3>Gunday</h3><p>Thriller • 2014</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Udta-Punjab_V.jpg" alt="Udta Punjab"></div>
+            <div class="card-info"><h3>Udta Punjab</h3><p>Thriller • 2016</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Andhadhun_V.jpg" alt="Andhadhun"></div>
+            <div class="card-info"><h3>Andhadhun</h3><p>Thriller • 2018</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Raazi_V.jpg" alt="Raazi"></div>
+            <div class="card-info"><h3>Raazi</h3><p>Thriller • 2018</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/OldBoy_V.jpeg" alt="OldBoy"></div>
+            <div class="card-info"><h3>OldBoy</h3><p>Thriller • 2003</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="scifi-section">Sci-Fi</h3>
+    <div class="movie-grid">
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Krish_V.jpg" alt="Krrish"></div>
+            <div class="card-info"><h3>Krish</h3><p>Sci-Fi • 2006</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Ra-One_V.jpg" alt="Ra-One"></div>
+            <div class="card-info"><h3>Ra-One</h3><p>Sci-Fi • 2011</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Interstellar_V.jpg" alt="Interstellar"></div>
+            <div class="card-info"><h3>Interstellar</h3><p>Sci-Fi • 2014</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Dune_V.jpg" alt="Dune"></div>
+            <div class="card-info"><h3>Dune</h3><p>Sci-Fi • 2021</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Kalki_V.jpg" alt="Kalki"></div>
+            <div class="card-info"><h3>Kalki</h3><p>Sci-Fi • 2024</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Mr.India_V.jpg" alt="Mr. India"></div>
+            <div class="card-info"><h3>Mr. India</h3><p>Sci-Fi • 1987</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="horror-section">Horror</h3>
+    <div class="movie-grid">
+        <a href="Movies/Frankenstein.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Frankenstein_V.jpg" alt="Frankenstein"></div>
+            <div class="card-info"><h3>Frankenstein</h3><p>Horror • 2025</p></div>
+        </a>
+        <a href="Movies/Tumbbad.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Tumbbad_V.jpg" alt="Tumbbad"></div>
+            <div class="card-info"><h3>Tumbbad</h3><p>Horror • 2018</p></div>
+        </a>
+        <a href="Movies/The-Conjuring.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-Conjuring_V.jpg" alt="The Conjuring"></div>
+            <div class="card-info"><h3>The Conjuring</h3><p>Horror • 2013</p></div>
+        </a>
+        <a href="Movies/The-Shining.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-Shinning_V.jpg" alt="The Shining"></div>
+            <div class="card-info"><h3>The Shining</h3><p>Horror • 1980</p></div>
+        </a>
+        <a href="Movies/Sinners.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Sinners_V.jpg" alt="Sinners"></div>
+            <div class="card-info"><h3>Sinners</h3><p>Horror • 2025</p></div>
+        </a>
+        <a href="Movies/American-Psycho.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/American-Pyscho_V.jpg" alt="American Psycho"></div>
+            <div class="card-info"><h3>American Psycho</h3><p>Horror • 2000</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="comedy-section">Comedy</h3>
+    <div class="movie-grid">
+        <a href="Movies/Phir-Hera-Pheri.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Phir-Hera-Pheri_V.jpg" alt="Phir Hera Pheri"></div>
+            <div class="card-info"><h3>Phir Hera Pheri</h3><p>Comedy • 2006</p></div>
+        </a>
+        <a href="Movies/Madgaon-Express.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Madgaon-Express_V.jpg" alt="Madgaon Express"></div>
+            <div class="card-info"><h3>Madgaon Express</h3><p>Comedy • 2024</p></div>
+        </a>
+        <a href="Movies/The-Hangover.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-Hangover_V.jpg" alt="The Hangover"></div>
+            <div class="card-info"><h3>The Hangover</h3><p>Comedy • 2009</p></div>
+        </a>
+        <a href="Movies/Welcome.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Welcome_V.jpg" alt="Welcome"></div>
+            <div class="card-info"><h3>Welcome</h3><p>Comedy • 2007</p></div>
+        </a>
+        <a href="Movies/Dhamaal.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Dhamaal_V.jpg" alt="Dhamaal"></div>
+            <div class="card-info"><h3>Dhamaal</h3><p>Comedy • 2007</p></div>
+        </a>
+        <a href="Movies/Singh-Is-King.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Singh-is-King_V.jpg" alt="Singh is King"></div>
+            <div class="card-info"><h3>Singh is King</h3><p>Comedy • 2008</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="drama-section">Drama</h3>
+    <div class="movie-grid">
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Yeh-Jawani-Hai-Deewani-V.jpg" alt="Yeh Jawani Hai Deewani"></div>
+            <div class="card-info"><h3>Yeh Jawani Hai Deewani</h3><p>Drama • 2013</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Marty-Supreme_V.jpg" alt="Marty Supreme"></div>
+            <div class="card-info"><h3>Marty Supreme</h3><p>Drama • 2025</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Lagaan_V.jpg" alt="Lagaan"></div>
+            <div class="card-info"><h3>Lagaan</h3><p>Drama • 2001</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Haider_V.jpg" alt="Haider"></div>
+            <div class="card-info"><h3>Haider</h3><p>Drama • 2014</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Drishyam_V.jpg" alt="Drishyam"></div>
+            <div class="card-info"><h3>Drishyam</h3><p>Drama • 2013</p></div>
+        </a>
+        <a href="Movies/The-Godfather.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-GodFather_V.jpg" alt="The Godfather"></div>
+            <div class="card-info"><h3>The Godfather</h3><p>Drama • 1972</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="romance-section">Romance</h3>
+    <div class="movie-grid">
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Dilwale-Dulhaniya-Le-Jayenge_V.jpg" alt="DDLJ"></div>
+            <div class="card-info"><h3>Dilwale Dulhaniya Le Jayenge</h3><p>Romance • 1995</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Tere-Naam_V.jpg" alt="Tere Naam"></div>
+            <div class="card-info"><h3>Tere Naam</h3><p>Romance • 2003</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Jab-We-Met_V.jpg" alt="Jab We Met"></div>
+            <div class="card-info"><h3>Jab We Met</h3><p>Romance • 2007</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Lala-Land_V.jpg" alt="Lala Land"></div>
+            <div class="card-info"><h3>Lala Land</h3><p>Romance • 2016</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Dil-Bechara_V.jpg" alt="Dil-Bechara"></div>
+            <div class="card-info"><h3>Dil Bechara</h3><p>Romance • 2020</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Hasse-To-Phasee_V.jpg" alt="Hasee To Phasee"></div>
+            <div class="card-info"><h3>Hasee To Phasee</h3><p>Romance • 2014</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="superhero-section">Super-Hero</h3>
+    <div class="movie-grid">
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Mard-Ko-Dard-Nhi-Hota-V.jpg" alt="Mard Ko Dard Nhi Hota"></div>
+            <div class="card-info"><h3>Mard Ko Dard Nhi Hota</h3><p>Super-Hero • 2018</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-Avengers_V.jpg" alt="The Avengers"></div>
+            <div class="card-info"><h3>The Avengers</h3><p>Super-Hero • 2012</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Super-Singh_V.jpg" alt="Super Singh"></div>
+            <div class="card-info"><h3>Super Singh</h3><p>Super-Hero • 2017</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Hanu-man_V.jpg" alt="Hanu-man"></div>
+            <div class="card-info"><h3>Hanu-man</h3><p>Super-Hero • 2024</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Minnal-Murali_V.jpg" alt="Minnal Murali"></div>
+            <div class="card-info"><h3>Minnal Murali</h3><p>Super-Hero • 2021</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-Dark-Night-Rises_V.jpg" alt="The Dark Knight Rises"></div>
+            <div class="card-info"><h3>The Dark Knight Rises</h3><p>Super-Hero • 2012</p></div>
+        </a>
+    </div>
+
+    <h3 class="genre-name animate-slide" id="animated-section">Animated</h3>
+    <div class="movie-grid">
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Big-Hero-6-V.jpg" alt="Big Hero 6"></div>
+            <div class="card-info"><h3>Big Hero 6</h3><p>Animated • 2014</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/The-Rise-of-Kirmanda_V.jpg" alt="The Rise of Kirmanda"></div>
+            <div class="card-info"><h3>The Rise Of Kirmanda</h3><p>Animated • 2012</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Mahavatr-Narsimha_V.jpg" alt="Mahavatr Narsimha"></div>
+            <div class="card-info"><h3>Mahavatr Narsimha</h3><p>Animated • 2025</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Your-Name._V.jpg" alt="Your Name."></div>
+            <div class="card-info"><h3>Your Name.</h3><p>Animated • 2016</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/Chota-Bheem-Aur-Krishna-vs-Zimbara_V.jpg" alt="Chota Bheem"></div>
+            <div class="card-info"><h3>Chota Bheem Aur Krishna Vs Zimbara</h3><p>Animated • 2013</p></div>
+        </a>
+        <a href="Movies/Template.html" class="movie-card">
+            <div class="poster-box"><img src="../Assets/images/UP_V.jpg" alt="UP"></div>
+            <div class="card-info"><h3>UP</h3><p>Animated • 2009</p></div>
+        </a>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-brand">
+            <a href="Home.html"><img src="/Assets/images/logo.svg" alt="The Verdict" style="height: 35px;"></a>
+            <p>Your ultimate destination for movie reviews and cinematic updates.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Navigation</h4>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Movies.html">Explore Movies</a></li>
+                <li><a href="TV-Shows.html">TV Shows</a></li>
+                <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/_the_verdict_/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 The Verdict. Designed for College Project.</p>
+    </div>
+</footer>
+
+<script src="../JS/Explore.js"></script>
+
+</body>
+</html>

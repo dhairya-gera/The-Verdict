@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Verdict | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../CSS/Login.css">
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="noise"></div>
+ 
+<!-- NAVBAR -->
+<nav>
+    <a href="#" class="nav-logo">THE <span>VERDICT</span></a>
+</nav>
+ 
+<!-- MAIN -->
+<div class="page-wrapper">
+    <div class="auth-container">
+ 
+        <!-- TABS -->
+        <div class="tab-switcher">
+            <button class="tab-btn active" onclick="switchTab('login')">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </button>
+            <button class="tab-btn" onclick="switchTab('register')">
+                <i class="fa-solid fa-user-plus"></i> Register
+            </button>
+        </div>
+ 
+        <div class="auth-card">
+ 
+            <!-- ========== LOGIN PANEL ========== -->
+            <div class="panel active" id="login-panel">
+                <div class="form-heading">
+                    <h2>Welcome <span class="accent">Back</span></h2>
+                    <p>Login to access your personalized reviews and watchlist.</p>
+                </div>
+ 
+                <div class="alert error" id="login-error">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span id="login-error-msg">Invalid email or password.</span>
+                </div>
+ 
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="login-email" placeholder="you@example.com">
+                    </div>
+                </div>
+ 
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="login-password" placeholder="Enter your password">
+                        <button class="toggle-pass" onclick="togglePass('login-password', this)" type="button">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+ 
+                <div class="extras-row">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember-me"> Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </div>
+ 
+                <button class="submit-btn" onclick="handleLogin()">
+                    <span class="spinner"></span>
+                    <span class="btn-text"><i class="fa-solid fa-right-to-bracket"></i> Login</span>
+                </button>
+ 
+                <div class="divider">or continue with</div>
+ 
+                <div class="social-btns">
+                    <button class="social-btn" onclick="socialLogin('Google')">
+                        <i class="fa-brands fa-google"></i> Google
+                    </button>
+                    <button class="social-btn" onclick="socialLogin('Facebook')">
+                        <i class="fa-brands fa-facebook"></i> Facebook
+                    </button>
+                </div>
+            </div>
+ 
+            <!-- ========== REGISTER PANEL ========== -->
+            <div class="panel" id="register-panel">
+ 
+                <!-- STEP INDICATOR -->
+                <div class="reg-steps" id="reg-steps">
+                    <div class="step active" id="step-1">
+                        <div class="step-circle">1</div>
+                        <div class="step-label">Details</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step" id="step-2">
+                        <div class="step-circle">2</div>
+                        <div class="step-label">Verify</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step" id="step-3">
+                        <div class="step-circle">3</div>
+                        <div class="step-label">Done</div>
+                    </div>
+                </div>
+ 
+                <!-- STEP 1: Fill Details -->
+                <div id="reg-step-1">
+                    <div class="form-heading">
+                        <h2>Create <span class="accent">Account</span></h2>
+                        <p>Join The Verdict and start reviewing.</p>
+                    </div>
+ 
+                    <div class="alert error" id="reg-error">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span id="reg-error-msg">Please fill all fields correctly.</span>
+                    </div>
+ 
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="reg-name" placeholder="Your full name">
+                        </div>
+                    </div>
+ 
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="reg-email" placeholder="you@example.com">
+                        </div>
+                    </div>
+ 
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="reg-password" placeholder="Min. 6 characters" oninput="checkStrength(this.value)">
+                            <button class="toggle-pass" onclick="togglePass('reg-password', this)" type="button">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="strength-bar">
+                            <span id="s1"></span><span id="s2"></span>
+                            <span id="s3"></span><span id="s4"></span>
+                        </div>
+                        <div class="strength-text" id="strength-text"></div>
+                    </div>
+ 
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="reg-confirm" placeholder="Re-enter password">
+                            <button class="toggle-pass" onclick="togglePass('reg-confirm', this)" type="button">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+ 
+                    <button class="submit-btn" onclick="handleRegister()">
+                        <span class="spinner"></span>
+                        <span class="btn-text">Continue <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+ 
+                    <p class="terms-text">By registering, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+ 
+                <!-- STEP 2: OTP -->
+                <div id="reg-step-2" style="display:none;">
+                    <button class="back-btn" onclick="goBackToDetails()">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+ 
+                    <div class="form-heading">
+                        <h2>Verify <span class="accent">Email</span></h2>
+                        <p>OTP sent to your email address.</p>
+                    </div>
+ 
+                    <div class="otp-section show">
+                        <div class="otp-info">
+                            A <strong>6-digit OTP</strong> has been sent to <strong id="otp-email-display"></strong>. Check your inbox (and spam folder).
+                        </div>
+ 
+                        <div class="otp-boxes">
+                            <input class="otp-box" type="text" maxlength="1" inputmode="numeric" id="otp0" oninput="otpInput(this, 0)">
+                            <input class="otp-box" type="text" maxlength="1" inputmode="numeric" id="otp1" oninput="otpInput(this, 1)">
+                            <input class="otp-box" type="text" maxlength="1" inputmode="numeric" id="otp2" oninput="otpInput(this, 2)">
+                            <input class="otp-box" type="text" maxlength="1" inputmode="numeric" id="otp3" oninput="otpInput(this, 3)">
+                            <input class="otp-box" type="text" maxlength="1" inputmode="numeric" id="otp4" oninput="otpInput(this, 4)">
+                            <input class="otp-box" type="text" maxlength="1" inputmode="numeric" id="otp5" oninput="otpInput(this, 5)">
+                        </div>
+ 
+                        <div class="resend-row">
+                            <button class="resend-btn" id="resend-btn" onclick="resendOTP()" disabled>Resend OTP</button>
+                            &nbsp;in <span id="countdown">30</span>s
+                        </div>
+                    </div>
+ 
+                    <div class="alert error" id="otp-error">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span id="otp-error-msg">Incorrect OTP. Please try again.</span>
+                    </div>
+ 
+                    <button class="submit-btn" onclick="verifyOTP()">
+                        <span class="spinner"></span>
+                        <span class="btn-text"><i class="fa-solid fa-shield-halved"></i> Verify & Create Account</span>
+                    </button>
+ 
+                    <!-- DEV HELPER: shows OTP in console -->
+                    <p class="terms-text" style="margin-top:12px;">
+                        <i class="fa-solid fa-circle-info" style="color:var(--primary-blue)"></i>
+                        Demo mode: OTP is logged in browser console (F12 → Console)
+                    </p>
+                </div>
+ 
+                <!-- STEP 3: Success -->
+                <div id="reg-step-3" style="display:none; text-align:center; padding: 20px 0;">
+                    <div style="font-size:3.5rem; color: var(--success); margin-bottom:16px;">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h2 style="font-family:'Bebas Neue'; font-size:2rem; margin-bottom:8px; letter-spacing:0.05em;">Account <span style="color:var(--primary-blue)">Created!</span></h2>
+                    <p style="color:var(--text-gray); margin-bottom:28px; line-height:1.6;">Welcome to The Verdict, <strong id="welcome-name" style="color:var(--text-white)"></strong>! Your account has been successfully created.</p>
+                    <button class="submit-btn" onclick="switchTab('login')">
+                        <i class="fa-solid fa-right-to-bracket"></i> Proceed to Login
+                    </button>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</div>
+ 
+<!-- TOAST -->
+<div class="toast" id="toast">
+    <div class="toast-icon" id="toast-icon"></div>
+    <div class="toast-msg" id="toast-msg"></div>
+</div>
+ 
+<script src="../JS/Login.js">
+
+</script>
+</body>
+</html>

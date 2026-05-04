@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhurandhar | The Verdict</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../CSS/Movies/Movie_info.css">
+    <style>
+    #movie-hero{background:
+        linear-gradient(to right, rgba(8, 8, 8, 1) 15%, rgba(8, 8, 8, 0.5) 50%, rgba(8, 8, 8, 0.1) 100%),
+        linear-gradient(to top, rgba(8, 8, 8, 1) 5%, transparent 40%),
+        url("../../Assets/images/Dhurandhar_H.jpg") center/cover no-repeat;}
+        </style>
+</head>
+<body>
+    
+    <div class="container">
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+            <a href="/HTML/Home.html"><img src="/Assets/images/logo.svg" alt="The Verdict Logo"></a>
+        </div>
+
+            <div class="search-container">
+                <form class="search-bar">
+                    <input type="search" placeholder="Search for movies, actors...">
+                    <button type="submit" class="search-btn" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+
+               <ul id="navlinks">
+                <li><a href="/HTML/Home.html" title="Home"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="/HTML/Movies.html" title="Movies"><i class="fa-solid fa-clapperboard"></i></a></li>
+                <li><a href="/HTML/TV-Shows.html" title="TV Shows"><i class="fa-solid fa-tv"></i></a></li>
+                <li><a href="/HTML/Music.html" title="Music" target="_blank"><i class="fa-solid fa-music"></i></a></li>
+                <li><a href="/HTML/Stats.html" title="Stats"><i class="fa-solid fa-chart-simple"></i></a></li>
+
+                <li class="nav-profile">
+                    <a href="#"><img src="/Assets/images/pfp.jpeg" alt="Profile" class="pfp"></a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="movie-hero">
+            <div id="overlay"></div>
+            <div id="movie-content">
+                <div id="movie-poster">
+                    <img src="../../Assets/images/Dhurandhar_V.jpg" alt="Dhurandhar Movie Poster">
+                </div>
+
+                <div id="movie-details">
+                    <p id="data">Movie • 2025 • 3h 34m</p>
+                    <h1>Dhurandhar</h1>
+
+                    <div id="info-grid">
+                        <div class="info-box">
+                            <span>Directed By</span>
+                            <p>Aditya Dhar</p>
+                        </div>
+                        <div class="info-box">
+                            <span>Country</span>
+                            <p>India</p>
+                        </div>
+                        <div class="info-box">
+                            <span>Language</span>
+                            <p>Hindi</p>
+                        </div>
+                        <div class="info-box">
+                            <span>Age Rating</span>
+                            <p>18+</p>
+                        </div>
+                        <div class="info-box">
+                            <span>Genre</span>
+                            <p>Action-Thriller</p>
+                        </div>
+                    </div> 
+                </div>
+
+                <div id="actions">
+                    <button id="primary-btn">
+                        <i class="fa-regular fa-eye"></i> Mark as Watched
+                    </button>
+                    <a href="/HTML/Music.html" style="text-decoration: none;" target="_blank">
+                        <button id="music-btn">
+                        <i class="fa-solid fa-music"></i> Listen Here
+                        </button>
+                        </a>
+                    <button id="secondary-btn">
+                        <i class="fa-regular fa-bookmark"></i> Add to Playlist
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="movie-description">
+            <div class="description-container">
+                <h2>Overview</h2>
+                <p id="movie-description1">
+                    Dhurandhar is a gripping action thriller that follows the Kandahar hijacking and rising cross-border terror. 
+                    Indian intelligence starts a covert mission in Pakistan. IB director Ajay Sanyal sends agent "Hamza Ali Mazari" 
+                    into Lyari, Karachi, where gang rivalries and local politics shape daily life. When he earns the trust of 
+                    Rehman Dakait and his gang, he quietly passes information back to India.
+                </p>
+            </div>
+        </section>
+
+        <section class="review-module">
+            
+            <h2 class="section-header">Critics Consensus</h2>
+
+           
+            <div class="ratings-grid">
+                
+                <div class="rating-card imdb">
+                    <div class="brand-name">
+                        <svg class="svg-icon filled" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        IMDb
+                    </div>
+                    <div class="score-value">7.6<span style="font-size:16px; color:#777;">/10</span></div>
+                    <div class="score-subtext">842K Ratings</div>
+                </div>
+
+                <div class="rating-card rt">
+                    <div class="brand-name">
+                        <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path><circle cx="12" cy="12" r="4"></circle></svg>
+                        Rotten Tomatoes
+                    </div>
+                    <div class="score-value">89%</div>
+                    <div class="score-subtext">Certified Fresh (322 Reviews)</div>
+                </div>
+
+                <div class="rating-card moctale">
+                    <div class="brand-name">
+                        <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M10 8v8l6-4-6-4z"></path></svg>
+                        MOCTALE.in
+                    </div>
+                    <div class="score-value">8.2<span style="font-size:16px; color:#777;">/10</span></div>
+                    <div class="score-subtext">Must Watch</div>
+                </div>
+
+                <div class="rating-card verdict">
+                    <div class="brand-name">
+                        <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        The Verdict
+                    </div>
+                    <div class="score-value" style="color: white;">96%</div>
+                    <div class="score-subtext">Editor's Choice</div>
+                </div>
+
+            </div>
+
+            <h2 class="section-header" style="margin-top: 60px;">Detailed Reviews</h2>
+            
+            <div class="reviews-grid">
+                
+                <div class="review-text-card our-review">
+                    <div class="reviewer-info">
+                        <div class="reviewer-logo" style="background: #E50914; color: white; font-weight: 900; border-radius: 50%;">V</div>
+                        <div>
+                            <div class="reviewer-name">The Verdict Official</div>
+                            <div class="reviewer-date">Reviewed by Team Verdict • March 2026</div>
+                        </div>
+                    </div>
+                    <p class="review-body">
+                        "Dhurandhar is more than just a spy thriller; it's a cold, calculated look into the shadows of espionage. Aditya Dhar masterfully crafts a tense atmosphere where silence is as loud as the explosions. The portrayal of Karachi’s Lyari is gritty and terrifyingly real. A definitive masterpiece in Indian action cinema."
+                    </p>
+                    <a href="#" class="read-more">Read Full Analysis 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="review-text-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-logo" style="color: #00E5FF;">
+                            <i class="fa-solid fa-bolt" style="font-size: 24px;"></i>
+                        </div>
+                        <div>
+                            <div class="reviewer-name">MOCTALE.in</div>
+                            <div class="reviewer-date">Top Critic Consensus</div>
+                        </div>
+                    </div>
+                    <p class="review-body">
+                        "The pacing is breathless. MOCTALE finds the undercover sequences to be some of the most heart-pounding moments in recent memory. Dhar trades typical bravado for a grounded, high-stakes narrative. A definitive masterpiece."
+                    </p>
+                    <a href="https://www.moctale.in/content/dhurandhar-2025" class="read-more" target="_blank">Full MOCTALE Verdict 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="review-text-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-logo" style="color: #FA320A;">
+                            <i class="fa-solid fa-fire" style="font-size: 24px;"></i>
+                        </div>
+                        <div>
+                            <div class="reviewer-name">Rotten Tomatoes</div>
+                            <div class="reviewer-date">Aggregated Critics Review</div>
+                        </div>
+                    </div>
+                    <p class="review-body">
+                        "Fresh and visceral. Dhurandhar trades typical Bollywood bravado for a grounded, high-stakes narrative. Dhar's direction remains sharp, delivering a spy epic that feels both personal and massive in scale."
+                    </p>
+                    <a href="https://www.rottentomatoes.com/m/dhurandhar" class="read-more" target="_blank">View All Reviews 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../Home.html"><img src="/Assets/images/logo.svg" alt="The Verdict"></a>
+                <p>Your ultimate destination for movie reviews and cinematic updates.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="../Home.html">Home</a></li>
+                    <li><a href="../Movies.html">Explore Movies</a></li>
+                    <li><a href="../TV-Shows.html">TV Shows</a></li>
+                    <li><a href="../TV-Shows.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/_the_verdict_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Verdict. Project for Cinematic Excellence.</p>
+        </div>
+    </footer>
+    </div>
+<script src="../../JS/movie-actions.js"></script>
+</body>
+</html>
