@@ -4,8 +4,10 @@ A dynamic movie discovery and review web application built using HTML, CSS, and 
 
 <div align="center">
 
-<!-- Animated Header -->
-<img src="https://capsules-render.vercel.app/api?type=waving&color=3AADFC&height=150&section=header&text=The%20Verdict&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Cinematic%20Discovery%20%26%20Reviews%20Platform&descAlignY=61&descAlign=50" width="100%"/>
+<!-- Updated Animated Header Link -->
+<img src="https://capsules-render.vercel.app/api?type=waving&color=3AADFC&height=150&section=header&text=The%20Verdict&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Cinematic%20Discovery%20Platform&descAlignY=61&descAlign=50" width="100%"/>
+
+</div>
 
 **A premium, dynamic, and fully responsive movie discovery web application inspired by top OTT platforms.**
 
