@@ -2,9 +2,8 @@
 A dynamic movie discovery and review web application built using HTML, CSS, and JavaScript. The project features a responsive UI with real-time movie filtering, genre-based categorization, and interactive user elements.
 
 
-<div align="center">
+div align="center">
 
-<!-- Updated Animated Header Link -->
 <img src="https://capsules-render.vercel.app/api?type=waving&color=3AADFC&height=150&section=header&text=The%20Verdict&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Cinematic%20Discovery%20Platform&descAlignY=61&descAlign=50" width="100%"/>
 
 </div>
@@ -32,8 +31,7 @@ The primary goal of this project was to implement advanced **DOM Manipulation**,
 
 ## 📸 Sneak Peek
 
-*(Upload a screenshot of your website and put the path here)*
-![The Verdict Home Screen Preview](Assets/images/screenshot-placeholder.png) 
+![The Verdict Home Screen Preview](/Assets/images/screenshow_placeholder.png) 
 
 ---
 
