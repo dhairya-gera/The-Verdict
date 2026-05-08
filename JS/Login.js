@@ -1,5 +1,6 @@
 const getUsers = () => JSON.parse(localStorage.getItem('verdict_users') || '[]');
 const saveUsers = (users) => localStorage.setItem('verdict_users', JSON.stringify(users));
+
 function switchTab(tab) {
     document.querySelectorAll('.tab-btn').forEach((btn, i) => {
         btn.classList.toggle('active', (i === 0 && tab === 'login') || (i === 1 && tab === 'register'));
@@ -8,14 +9,15 @@ function switchTab(tab) {
     document.getElementById(`${tab}-panel`).classList.add('active');
     document.querySelectorAll('.alert').forEach(a => a.classList.remove('show'));
 }
+
 function togglePass(id, btn) {
     const input = document.getElementById(id);
     const icon = btn.querySelector('i');
     const isPass = input.type === 'password';
-    
     input.type = isPass ? 'text' : 'password';
     icon.className = isPass ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
 }
+
 function checkStrength(val) {
     const bars = ['s1', 's2', 's3', 's4'].map(id => document.getElementById(id));
     const text = document.getElementById('strength-text');
@@ -32,6 +34,7 @@ function checkStrength(val) {
     text.textContent = labels[score - 1] || '';
     text.style.color = colors[score - 1] || '';
 }
+
 function handleLogin() {
     const email = document.getElementById('login-email').value.trim();
     const pass = document.getElementById('login-password').value;
@@ -50,14 +53,31 @@ function handleLogin() {
         }
     }, 1000);
 }
+
 function handleRegister() {
     const name = document.getElementById('reg-name').value.trim();
     const email = document.getElementById('reg-email').value.trim();
     const pass = document.getElementById('reg-password').value;
     const btn = document.querySelector('#reg-step-1 .submit-btn');
+
+    // 1. Basic Empty Check
     if (!name || !email || !pass) return showAlert('reg-error', 'All fields are required.');
+
+    // 2. Name Regex: Sirf letters aur spaces allow karega (Numbers blocked)
+    const nameRegex = /^[A-Za-z\s]+$/;
+    if (!nameRegex.test(name)) {
+        return showAlert('reg-error', 'Name should only contain letters.');
+    }
+
+    // 3. Email Regex: User@mail.com format check karega
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        return showAlert('reg-error', 'Please enter a valid email (e.g. name@mail.com).');
+    }
+
     const users = getUsers();
     if (users.find(u => u.email === email)) return showAlert('reg-error', 'Email already registered.');
+
     btn.classList.add('loading');
     setTimeout(() => {
         btn.classList.remove('loading');
@@ -71,11 +91,13 @@ function handleRegister() {
         document.getElementById('step-3').classList.add('active');
     }, 1200);
 }
+
 function showAlert(id, msg) {
     const alertBox = document.getElementById(id);
     alertBox.querySelector('span').textContent = msg;
     alertBox.classList.add('show');
 }
+
 function showToast(type, icon, msg) {
     const toast = document.getElementById('toast');
     document.getElementById('toast-icon').innerHTML = icon;
