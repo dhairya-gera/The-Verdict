@@ -5,15 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchForm) {
         searchForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            let searchTerm = searchInput.value.trim();
-            
-            if (searchTerm !== "") {
-                window.location.href = `Movies.html?search=${encodeURIComponent(searchTerm)}`;
-            } else {
                 window.location.href = 'Movies.html';
             }
-        });
-    }
+)};
 
     const navbar = document.getElementById('navbar');
     const backToTopBtn = document.getElementById('backToTopBtn');
